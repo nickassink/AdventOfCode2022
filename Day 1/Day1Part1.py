@@ -1,15 +1,16 @@
 lastInput = False
 index = 0
-
 elfs = list()
 elfs.append(0)
 
+inputFile = open("Day 1/input.txt", "r")
+
 while not lastInput:
-    userInput = input()
-    if userInput == 'c':
+    userInput = inputFile.readline()
+    if userInput == '':
         lastInput = True
         break
-    elif userInput == '':
+    elif userInput == '\n':
         index = index + 1
         elfs.append(0)
     else:
